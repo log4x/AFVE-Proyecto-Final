@@ -4,6 +4,7 @@ types
 	public Tid = token;
 values
 -- TODO Define values here
+
 instance variables
 	public id_estudiante : Eid;
 	public id_tarjeta : Tid;
