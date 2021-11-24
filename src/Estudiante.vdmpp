@@ -16,8 +16,9 @@ operations
 	
 	public Estudiante: Eid * Tid * set of Curso ==> Estudiante
 	Estudiante(eId, tId, cursos) ==  (id_estudiante := eId; 
-																	 id_tarjeta := tId;
-																	 Cursos := {c.GetCursoId() |-> c | c in set cursos};) -- GetCursoId -> implementar en clase curso
+									id_tarjeta := tId;
+									Cursos := {c.GetCursoId() |-> c | c in set cursos};) -- GetCursoId -> implementar en clase curso
+	pre forall c1, c2 in set cursos & c1<>c2 => c1.GetCursoId() <> c2.GetCursoId();
 functions
 -- TODO Define functions here
 traces
