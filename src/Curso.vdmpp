@@ -1,0 +1,19 @@
+class Curso
+types
+	string = seq of char
+instance variables
+	public id_Curso: token;
+	public nombre: string :=[];
+	private estudiantes: map Estudiante'id_tarjeta to Estudiante;
+
+operations
+public MostrarEstudiantes:()=>void
+MostrarEstudiantes()==
+(	print (dom estudiantes);
+);
+public IngresarEstudiante: Estudiante ==> ()
+IngresarEstudiante(es)==
+	estudiantes ++ {es.GetTarjeta() |-> es }
+ ;
+
+end Curso
